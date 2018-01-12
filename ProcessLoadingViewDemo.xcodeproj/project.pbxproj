@@ -12,6 +12,10 @@
 		FD135A0C2008F012006F1896 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD135A0A2008F012006F1896 /* Main.storyboard */; };
 		FD135A0E2008F012006F1896 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD135A0D2008F012006F1896 /* Assets.xcassets */; };
 		FD135A112008F012006F1896 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD135A0F2008F012006F1896 /* LaunchScreen.storyboard */; };
+		FD135A1D2008F02E006F1896 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD135A192008F02E006F1896 /* Extensions.swift */; };
+		FD135A1E2008F02E006F1896 /* ProcessLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD135A1A2008F02E006F1896 /* ProcessLoadingView.swift */; };
+		FD135A1F2008F02E006F1896 /* ProcessOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD135A1B2008F02E006F1896 /* ProcessOptions.swift */; };
+		FD135A202008F02E006F1896 /* ProcessStroke.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD135A1C2008F02E006F1896 /* ProcessStroke.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		FD135A0D2008F012006F1896 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FD135A102008F012006F1896 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FD135A122008F012006F1896 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD135A192008F02E006F1896 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		FD135A1A2008F02E006F1896 /* ProcessLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProcessLoadingView.swift; sourceTree = "<group>"; };
+		FD135A1B2008F02E006F1896 /* ProcessOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProcessOptions.swift; sourceTree = "<group>"; };
+		FD135A1C2008F02E006F1896 /* ProcessStroke.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProcessStroke.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +62,7 @@
 		FD135A052008F012006F1896 /* ProcessLoadingViewDemo */ = {
 			isa = PBXGroup;
 			children = (
+				FD135A182008F02E006F1896 /* processView */,
 				FD135A062008F012006F1896 /* AppDelegate.swift */,
 				FD135A082008F012006F1896 /* ViewController.swift */,
 				FD135A0A2008F012006F1896 /* Main.storyboard */,
@@ -62,6 +71,17 @@
 				FD135A122008F012006F1896 /* Info.plist */,
 			);
 			path = ProcessLoadingViewDemo;
+			sourceTree = "<group>";
+		};
+		FD135A182008F02E006F1896 /* processView */ = {
+			isa = PBXGroup;
+			children = (
+				FD135A192008F02E006F1896 /* Extensions.swift */,
+				FD135A1A2008F02E006F1896 /* ProcessLoadingView.swift */,
+				FD135A1B2008F02E006F1896 /* ProcessOptions.swift */,
+				FD135A1C2008F02E006F1896 /* ProcessStroke.swift */,
+			);
+			path = processView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +157,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD135A092008F012006F1896 /* ViewController.swift in Sources */,
+				FD135A202008F02E006F1896 /* ProcessStroke.swift in Sources */,
+				FD135A1D2008F02E006F1896 /* Extensions.swift in Sources */,
 				FD135A072008F012006F1896 /* AppDelegate.swift in Sources */,
+				FD135A1F2008F02E006F1896 /* ProcessOptions.swift in Sources */,
+				FD135A1E2008F02E006F1896 /* ProcessLoadingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +300,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ProcessLoadingViewDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.ProcessLoadingViewDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -290,6 +315,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ProcessLoadingViewDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.ProcessLoadingViewDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
