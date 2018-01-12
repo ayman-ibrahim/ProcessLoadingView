@@ -1,5 +1,4 @@
 # ProcessLoadingView
-(https://cocoapods.org/pods/ProcessLoadingView)
 [![Pod License](http://img.shields.io/cocoapods/l/KYDrawerController.svg?style=flat)](https://github.com/ayman-ibrahim/ProcessLoadingView/blob/master/LICENSE)
 [![Language](http://img.shields.io/badge/language-swift-brightgreen.svg?style=flat)](https://developer.apple.com/swift)
 ![Swift version](https://img.shields.io/badge/swift-4.0-orange.svg)
@@ -50,7 +49,7 @@ options.subTextColor = colorOrange
 viewProcessOutlet.options = options
 ```
 
-If you want a custom places on the circle shape:
+If you want a custom places on the circle shape, 
 do not use this method :
 ```Swift
 options.setNumberOfItems(number: totalSteps)
