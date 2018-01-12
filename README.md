@@ -51,15 +51,15 @@ viewProcessOutlet.options = options
 ```
 
 If you want a custom places on the circle shape:
-
 do not use this method :
+```Swift
 options.setNumberOfItems(number: totalSteps)
-
+```
 and use:
 
 ```Swift
 let curvesStartRadians = [(3 * CGFloat.pi)/2, (23 * CGFloat.pi) / 12, (CGFloat.pi / 3), ((2 * CGFloat.pi) / 3), (13 * CGFloat.pi) / 12]
-        let curvesEndRadians   = [(23 * CGFloat.pi) / 12, (CGFloat.pi) / 3, (2 * CGFloat.pi) / 3, (13 * CGFloat.pi) / 12, (3 * CGFloat.pi)/2]
+let curvesEndRadians   = [(23 * CGFloat.pi) / 12, (CGFloat.pi) / 3, (2 * CGFloat.pi) / 3, (13 * CGFloat.pi) / 12, (3 * CGFloat.pi)/2]
 
 options.curvesStartRadians = curvesStartRadians
 options.curvesEndRadians = curvesEndRadians
