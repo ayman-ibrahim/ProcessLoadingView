@@ -3,7 +3,7 @@
 [![Language](http://img.shields.io/badge/language-swift-brightgreen.svg?style=flat)](https://developer.apple.com/swift)
 ![Swift version](https://img.shields.io/badge/swift-4.0-orange.svg)
 
-`ProcessLoadingView` is a CABasicAnimation based loading animation inspired from:\n
+`ProcessLoadingView` is a CABasicAnimation based loading animation inspired from:  
 https://dribbble.com/shots/1118077-Proces-animation
 
 ![Alt Text](https://github.com/ayman-ibrahim/ProcessLoadingView/blob/master/ProcessLoadingViewDemo/5Items.gif) ![Alt Text](https://github.com/ayman-ibrahim/ProcessLoadingView/blob/master/ProcessLoadingViewDemo/8items.gif)
