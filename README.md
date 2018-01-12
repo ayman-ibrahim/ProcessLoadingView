@@ -30,7 +30,7 @@ create a view in the storyboard and give it's class 'ProcessLoadingView' then co
 
 ### Code
 ```Swift
-
+//totalSteps: adding 8 process items, this number can be increased or decreased ;) 
 let totalSteps = 8
 var options = ProcessOptions()
 options.setNumberOfItems(number: totalSteps)
