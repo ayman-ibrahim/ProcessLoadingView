@@ -18,7 +18,7 @@ https://dribbble.com/shots/1118077-Proces-animation
 - [x] capability of setting different attributes regarding the colors, fonts and the speed of the progress.
 
 
-Predfined locations in circumference|  Solarized Ocean
+Predfined locations in circumference|  Setting variable number of items (8)
 :-------------------------:|:-------------------------:
 ![](https://github.com/ayman-ibrahim/ProcessLoadingView/blob/master/ProcessLoadingViewDemo/5Items.gif)  |  ![](https://github.com/ayman-ibrahim/ProcessLoadingView/blob/master/ProcessLoadingViewDemo/8items.gif)
 
@@ -78,6 +78,7 @@ let curvesEndRadians   = [(23 * CGFloat.pi) / 12, (CGFloat.pi) / 3, (2 * CGFloat
 
 options.curvesStartRadians = curvesStartRadians
 options.curvesEndRadians = curvesEndRadians
+
 options.stepComplete = 3
 options.inSpeed = 1.2
 options.images = imageOpts(of: step, totalSteps: curvesStartRadians.count)
