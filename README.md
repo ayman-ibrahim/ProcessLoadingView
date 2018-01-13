@@ -3,10 +3,21 @@
 [![Language](http://img.shields.io/badge/language-swift-brightgreen.svg?style=flat)](https://developer.apple.com/swift)
 ![Swift version](https://img.shields.io/badge/swift-4.0-orange.svg)
 
-`ProcessLoadingView` is a CABasicAnimation based loading animation inspired from:  
+`ProcessLoadingView` is a CABasicAnimation based loading animation inspired from, where the user can nearly customize everything in it:  
 https://dribbble.com/shots/1118077-Proces-animation
 
-![Alt Text](https://github.com/ayman-ibrahim/ProcessLoadingView/blob/master/ProcessLoadingViewDemo/5Items.gif) ![Alt Text](https://github.com/ayman-ibrahim/ProcessLoadingView/blob/master/ProcessLoadingViewDemo/8items.gif)
+## Features
+
+- [x] light weight easy to setup.
+- [x] completely customizable.
+- [x] Dynamic number of items can be set .
+- [x] capability of setting custom locations of the items in the circumference  .
+- [x] Ability to set different image for every item.
+- [x] capability of setting different attributes regarding the colors, fonts and the speed of the progress.
+
+
+![alt-text-1](https://github.com/ayman-ibrahim/ProcessLoadingView/blob/master/ProcessLoadingViewDemo/5Items.gif) ![alt-text-2](https://github.com/ayman-ibrahim/ProcessLoadingView/blob/master/ProcessLoadingViewDemo/8items.gif)
+
 
 
 ## Installation
@@ -58,6 +69,7 @@ options.setNumberOfItems(number: totalSteps)
 and use:
 
 ```Swift
+var options = ProcessOptions()
 let curvesStartRadians = [(3 * CGFloat.pi)/2, (23 * CGFloat.pi) / 12, (CGFloat.pi / 3), ((2 * CGFloat.pi) / 3), (13 * CGFloat.pi) / 12]
 let curvesEndRadians   = [(23 * CGFloat.pi) / 12, (CGFloat.pi) / 3, (2 * CGFloat.pi) / 3, (13 * CGFloat.pi) / 12, (3 * CGFloat.pi)/2]
 
