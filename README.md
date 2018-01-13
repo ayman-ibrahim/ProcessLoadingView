@@ -3,6 +3,8 @@
 [![Language](http://img.shields.io/badge/language-swift-brightgreen.svg?style=flat)](https://developer.apple.com/swift)
 ![Swift version](https://img.shields.io/badge/swift-4.0-orange.svg)
 
+##
+
 `ProcessLoadingView` is a CABasicAnimation based loading animation inspired from, where the user can nearly customize everything in it:  
 https://dribbble.com/shots/1118077-Proces-animation
 
@@ -16,8 +18,9 @@ https://dribbble.com/shots/1118077-Proces-animation
 - [x] capability of setting different attributes regarding the colors, fonts and the speed of the progress.
 
 
-![alt-text-1](https://github.com/ayman-ibrahim/ProcessLoadingView/blob/master/ProcessLoadingViewDemo/5Items.gif) ![alt-text-2](https://github.com/ayman-ibrahim/ProcessLoadingView/blob/master/ProcessLoadingViewDemo/8items.gif)
-
+Solarized dark             |  Solarized Ocean
+:-------------------------:|:-------------------------:
+![](https://github.com/ayman-ibrahim/ProcessLoadingView/blob/master/ProcessLoadingViewDemo/5Items.gif)  |  ![](https://github.com/ayman-ibrahim/ProcessLoadingView/blob/master/ProcessLoadingViewDemo/8items.gif)
 
 
 ## Installation
