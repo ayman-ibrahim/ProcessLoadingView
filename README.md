@@ -1,11 +1,11 @@
 # ProcessLoadingView
-[![Pod License](http://img.shields.io/cocoapods/l/KYDrawerController.svg?style=flat)](https://github.com/ayman-ibrahim/ProcessLoadingView/blob/master/LICENSE)
+[![Pod License](http://img.shields.io/cocoapods/l/ProcessLoadingView.svg?style=flat)](https://github.com/ayman-ibrahim/ProcessLoadingView/blob/master/LICENSE)
 [![Language](http://img.shields.io/badge/language-swift-brightgreen.svg?style=flat)](https://developer.apple.com/swift)
 ![Swift version](https://img.shields.io/badge/swift-4.0-orange.svg)
 
 ##
 
-`ProcessLoadingView` is a CABasicAnimation based loading animation inspired from, where the user can nearly customize everything in it:  
+`ProcessLoadingView` is a `CABasicAnimation` based loading animation inspired from, where the user can nearly customize everything in it:  
 https://dribbble.com/shots/1118077-Proces-animation
 
 ## Features
@@ -95,7 +95,7 @@ viewProcessOutlet.options = options
 
 ```
  
-# to get the locations in the circle circumference:
+# To get the locations in the circle circumference:
 
 ![Alt Text](http://math.rice.edu/~pcmi/sphere/degrad.gif)
 
