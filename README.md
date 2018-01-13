@@ -12,13 +12,13 @@ https://dribbble.com/shots/1118077-Proces-animation
 
 - [x] light weight easy to setup.
 - [x] completely customizable.
-- [x] Dynamic number of items can be set .
+- [x] dynamic number of items can be set .
 - [x] capability of setting custom locations of the items in the circumference  .
-- [x] Ability to set different image for every item.
+- [x] ability to set different image for every item.
 - [x] capability of setting different attributes regarding the colors, fonts and the speed of the progress.
 
 
-Solarized dark             |  Solarized Ocean
+Predfined locations in circumference|  Solarized Ocean
 :-------------------------:|:-------------------------:
 ![](https://github.com/ayman-ibrahim/ProcessLoadingView/blob/master/ProcessLoadingViewDemo/5Items.gif)  |  ![](https://github.com/ayman-ibrahim/ProcessLoadingView/blob/master/ProcessLoadingViewDemo/8items.gif)
 
