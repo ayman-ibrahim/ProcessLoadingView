@@ -118,6 +118,30 @@ options.subTextColor = colorOrange
 viewProcessOutlet.options = options
 
 ```
+
+# ProcessView action methods
+
+To start Animation:
+```Swift
+viewProcess.start()
+```
+
+Reverse animation without removing the items:
+```Swift
+viewProcess.reverse(removeBtns: false)
+{
+     //code run after finishing
+}
+```
+
+Reverse animation then removing the items:
+```Swift
+viewProcess.reverse(removeBtns: true)
+{
+     //code run after finishing
+}
+```
+
  
 # To get the locations in the circle circumference:
 
