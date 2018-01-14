@@ -40,11 +40,34 @@ Just add the processView folder to your project.
 
 ## Usage
 (see sample Xcode project Demo)
-
 create a view in the storyboard and give it's class 'ProcessLoadingView' then connect an outlet to it.
 
+## Fast Setup
+`ProcessLoadingView` can have variable number of items based on your need, you only need the following steps to get it runing:
 
-### Code
+1- put a `UIView` in your storyboard and give it a class `ProcessLoadingView`.
+![Alt Text](https://image.ibb.co/g5Q2gm/class.png)
+
+2- connect an outlet to it, call it `viewProcess`
+
+3- create options object and assign it to `viewProcess` :
+
+```Swift
+let step = 3
+let totalSteps = 4
+        
+var options = ProcessOptions()
+options.setNumberOfItems(number: totalSteps)
+options.images = [(img1, nil), (img2, nil), (img3, nil), (img4, nil)]
+options.stepComplete = step
+options.bgColor = bgColor
+viewProcess.options = options
+```
+# note
+* set the number of process steps through options's `setNumberOfItems` method.
+* `options.images` should be assigned an array it's count equals to the total number of steps.
+
+### Full customization of processView
 ```Swift
 //totalSteps: adding 8 process items, this number can be increased or decreased ;) 
 let totalSteps = 8
