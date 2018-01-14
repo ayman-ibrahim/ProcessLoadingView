@@ -118,6 +118,11 @@ options.subTextColor = colorOrange
 viewProcessOutlet.options = options
 
 ```
+ 
+# To get the locations in the circle circumference:
+
+![Alt Text](http://math.rice.edu/~pcmi/sphere/degrad.gif)
+
 
 # ProcessView action methods
 
@@ -130,7 +135,7 @@ Reverse animation without removing the items:
 ```Swift
 viewProcess.reverse(removeBtns: false)
 {
-     //code run after finishing
+     //code to run after finishing
 }
 ```
 
@@ -138,14 +143,10 @@ Reverse animation then removing the items:
 ```Swift
 viewProcess.reverse(removeBtns: true)
 {
-     //code run after finishing
+     //code to run after finishing
 }
 ```
 
- 
-# To get the locations in the circle circumference:
-
-![Alt Text](http://math.rice.edu/~pcmi/sphere/degrad.gif)
 
 ## License
 
