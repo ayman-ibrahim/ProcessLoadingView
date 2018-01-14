@@ -63,11 +63,11 @@ options.stepComplete = step
 options.bgColor = bgColor
 viewProcess.options = options
 ```
-## note
+### note
 * set the number of process steps through options's `setNumberOfItems` method.
 * `options.images` should be assigned an array it's count equals to the total number of steps.
 
-### Full customization of processView
+# Full customization of processView
 ```Swift
 //totalSteps: adding 8 process items, this number can be increased or decreased ;) 
 let totalSteps = 8
