@@ -6,8 +6,8 @@
 
 ##
 
-`ProcessLoadingView` is a `CABasicAnimation` based loading animation inspired from, where the user can nearly customize everything in it:  
-https://dribbble.com/shots/1118077-Proces-animation
+`ProcessLoadingView` is a `CABasicAnimation` based loading animation, where the user can nearly customize everything in it:  
+inspired from: https://dribbble.com/shots/1118077-Proces-animation
 
 ## Features
 
@@ -63,7 +63,7 @@ options.stepComplete = step
 options.bgColor = bgColor
 viewProcess.options = options
 ```
-# note
+## note
 * set the number of process steps through options's `setNumberOfItems` method.
 * `options.images` should be assigned an array it's count equals to the total number of steps.
 
