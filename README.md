@@ -53,13 +53,13 @@ create a view in the storyboard and give it's class 'ProcessLoadingView' then co
 3- create options object and assign it to `viewProcess` :
 
 ```Swift
-let step = 3
+let stepComplete = 3
 let totalSteps = 4
         
 var options = ProcessOptions()
 options.setNumberOfItems(number: totalSteps)
 options.images = [(img1, nil), (img2, nil), (img3, nil), (img4, nil)]
-options.stepComplete = step
+options.stepComplete = stepComplete
 options.bgColor = bgColor
 viewProcess.options = options
 ```
