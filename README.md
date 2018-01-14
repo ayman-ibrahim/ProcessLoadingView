@@ -6,7 +6,7 @@
 
 ##
 
-`ProcessLoadingView` is a `CABasicAnimation` based loading animation, where the user can nearly customize everything in it:  
+`ProcessLoadingView` is a step indicator loading animation built using `CABasicAnimation` , where the user can nearly customize everything in it:  
 inspired from: https://dribbble.com/shots/1118077-Proces-animation
 
 ## Features
