@@ -31,7 +31,7 @@ public class ProcessLoadingView: UIView
     }
     
     //MARK - fire -
-    public func start()
+    public func start(completed: (()->())?)
     {
         guard options != nil else {
             assert(false, "Options must not be nil")
@@ -64,7 +64,10 @@ public class ProcessLoadingView: UIView
                         self.myPath = p
                         self.startPathAnimationForTheTwoStroks(myPath: p)
                         self.animatePositionAndOpacity(for: self.subText, posOrigin: CGPoint(x: self.subText.frame.origin.x, y: self.subText.frame.origin.y - 20), posDestination: self.subText.frame.origin, posAnimDuration: 0.5)
-                        self.animateAlpha(layer: self.textLayerParent, isAppearing: true, duration: 0.8, completed: nil)
+                        self.animateAlpha(layer: self.textLayerParent, isAppearing: true, duration: 0.8, completed:
+                        {
+                            completed?()
+                        })
                 })
             }
         }

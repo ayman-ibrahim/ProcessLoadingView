@@ -52,7 +52,10 @@ class ViewController: UIViewController
     {
         options.mainText = "CLEANING"//randomString(length: 9)
         options.subText = "IN PROCESS"
-        viewProcess.start()
+        viewProcess.start(completed:
+        {
+            print("done")
+        })
     }
     
     @IBAction func replay(_ sender: UIButton)
