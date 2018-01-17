@@ -32,7 +32,7 @@ Predfined locations in circumference|  Setting variable number of items (8)
 Add the following to your `Podfile`:
 
 ```ruby
-pod 'ProcessLoadingView'
+pod 'ProcessLoadingView', '~> 0.1.1'
 ```
 
 ### Manually
