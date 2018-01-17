@@ -73,7 +73,7 @@ public class ProcessLoadingView: UIView
         }
     }
     
-    public func reverse(removeBtns:Bool, completed: (()->())?)
+    public func reset(removeItems:Bool, completed: (()->())?)
     {
         guard let path = myPath else { return }
         if isAnimationRunning() { return }
@@ -81,7 +81,7 @@ public class ProcessLoadingView: UIView
         {
             self.reverseStroke(layer: path.complete?.shapeLayer, stroke: path.complete, completed:
                 {
-                    if removeBtns
+                    if removeItems
                     {
                         self.animateAlpha(layer: self.textLayerParent, isAppearing: false, completed: nil)
                         let count = self.processItems.count

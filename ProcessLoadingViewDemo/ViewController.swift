@@ -60,12 +60,12 @@ class ViewController: UIViewController
     
     @IBAction func replay(_ sender: UIButton)
     {
-        viewProcess.reverse(removeBtns: false, completed: nil)
+        viewProcess.reset(removeItems: false, completed: nil)
     }
     
     @IBAction func reset(_ sender: Any)
     {
-        viewProcess.reverse(removeBtns: true, completed: nil)
+        viewProcess.reset(removeItems: true, completed: nil)
     }
     
     //100 217 213
