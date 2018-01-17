@@ -128,12 +128,15 @@ viewProcessOutlet.options = options
 
 To start Animation:
 ```Swift
-viewProcess.start()
+viewProcess.start(completed:
+{
+     //code to run after finishing
+})
 ```
 
 Reverse animation without removing the items:
 ```Swift
-viewProcess.reverse(removeBtns: false)
+viewProcess.reset(removeItems: false)
 {
      //code to run after finishing
 }
@@ -141,7 +144,7 @@ viewProcess.reverse(removeBtns: false)
 
 Reverse animation then removing the items:
 ```Swift
-viewProcess.reverse(removeBtns: true)
+viewProcess.reset(removeItems: true)
 {
      //code to run after finishing
 }
