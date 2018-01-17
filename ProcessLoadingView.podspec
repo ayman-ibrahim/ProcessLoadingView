@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ProcessLoadingView'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = '`ProcessLoadingView` is a CABasicAnimation based loading animation inspired from https://dribbble.com/shots/1118077-Proces-animation'
 
 # This description is used to generate tags and improve search results.
@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
 
   s.description      = <<-DESC
 ProcessLoadingView is useful for apps which would like to show the progress of a certin process.
-It's fully customizable from and easy to use.
+It's fully customizable and easy to use.
                        DESC
 
   s.homepage         = 'https://github.com/ayman-ibrahim/ProcessLoadingView'
