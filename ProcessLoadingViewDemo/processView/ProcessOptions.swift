@@ -1,41 +1,41 @@
 
 import UIKit
 
-class ProcessOptions
+public class ProcessOptions
 {
     //MARK: - properties -
     private let speedConstant:CGFloat = 1000
-    typealias ImageWithSelectedTint = (UIImage, UIColor?)
-    var images:[ImageWithSelectedTint] = []
-    var stepComplete:Int = 0
-    var mainText = ""
-    var subText = ""
-    var mainTextfont:UIFont?
-    var subTextfont:UIFont?
-    var unCompletePathDashPattern:[NSNumber] = [3, 2]
-    var bgColor = UIColor.black
-    var ItemSize:CGFloat = 44.0
-    var radius:CGFloat = 120
-    var totalStepsCount = 0
+    public typealias ImageWithSelectedTint = (UIImage, UIColor?)
+    public var images:[ImageWithSelectedTint] = []
+    public var stepComplete:Int = 0
+    public var mainText = ""
+    public var subText = ""
+    public var mainTextfont:UIFont?
+    public var subTextfont:UIFont?
+    public var unCompletePathDashPattern:[NSNumber] = [3, 2]
+    public var bgColor = UIColor.black
+    public var ItemSize:CGFloat = 44.0
+    public var radius:CGFloat = 120
+    public var totalStepsCount = 0
     //
-    var completedPathColor = UIColor.white
-    var unCompletedPathColor = UIColor.gray
-    var mainTextColor = UIColor.white
-    var subTextColor = UIColor.brown
+    public var completedPathColor = UIColor.white
+    public var unCompletedPathColor = UIColor.gray
+    public var mainTextColor = UIColor.white
+    public var subTextColor = UIColor.brown
     //
-    var curvesStartRadians = [CGFloat]()
+    public var curvesStartRadians = [CGFloat]()
     {
         didSet
         {
             totalStepsCount = curvesStartRadians.count
         }
     }
-    var curvesEndRadians   = [CGFloat]()
+    public var curvesEndRadians   = [CGFloat]()
     //
     //Giving a default duration of 1.0
     private var _inSpeed: CGFloat = 1.0
     private var _outSpeed: CGFloat = 1.0
-    var inSpeed: CGFloat
+    public var inSpeed: CGFloat
     {
         set { _inSpeed = speedConstant * newValue }
         get
@@ -47,7 +47,7 @@ class ProcessOptions
             return _inSpeed
         }
     }
-    var outSpeed: CGFloat
+    public var outSpeed: CGFloat
     {
         set { _outSpeed = speedConstant * newValue }
         get
@@ -59,9 +59,15 @@ class ProcessOptions
             return _outSpeed
         }
     }
+    
+    //MARK: - Initializers -
+    public init() {
+        
+    }
+    
     //
     //MARK: - methods -
-    func setNumberOfItems(number:Int = 0)
+    public func setNumberOfItems(number:Int = 0)
     {
         totalStepsCount = number
         let angle:CGFloat = 360 / CGFloat(number)

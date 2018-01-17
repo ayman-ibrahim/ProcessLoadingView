@@ -11,7 +11,7 @@ import UIKit
 fileprivate let textHeight:CGFloat = 28.0
 fileprivate let animationKey = "animationKey"
 
-class ProcessLoadingView: UIView
+public class ProcessLoadingView: UIView
 {
     private let buttonsLayerParent = CAShapeLayer()
     private let curvesLayerParent = CAShapeLayer()
@@ -24,14 +24,14 @@ class ProcessLoadingView: UIView
     
     public var options:ProcessOptions!
     
-    override func layoutSubviews()
+    override public func layoutSubviews()
     {
         super.layoutSubviews()
         myCenter = CGPoint(x: self.frame.size.width / 2, y: self.frame.size.height / 2)
     }
     
     //MARK - fire -
-    func start()
+    public func start()
     {
         guard options != nil else {
             assert(false, "Options must not be nil")
@@ -59,54 +59,54 @@ class ProcessLoadingView: UIView
             for i in 0  ..<  options.curvesStartRadians.count
             {
                 drawShapeButtonAnimated(in: buttonsLayerParent, startAngle: options.curvesStartRadians[i], index: i, completed:
-                {
-                    let p = self.getAllPathsAsTwoStrokes(for: self.options.stepComplete)
-                    self.myPath = p
-                    self.startPathAnimationForTheTwoStroks(myPath: p)
-                    self.animatePositionAndOpacity(for: self.subText, posOrigin: CGPoint(x: self.subText.frame.origin.x, y: self.subText.frame.origin.y - 20), posDestination: self.subText.frame.origin, posAnimDuration: 0.5)
-                    self.animateAlpha(layer: self.textLayerParent, isAppearing: true, duration: 0.8, completed: nil)
+                    {
+                        let p = self.getAllPathsAsTwoStrokes(for: self.options.stepComplete)
+                        self.myPath = p
+                        self.startPathAnimationForTheTwoStroks(myPath: p)
+                        self.animatePositionAndOpacity(for: self.subText, posOrigin: CGPoint(x: self.subText.frame.origin.x, y: self.subText.frame.origin.y - 20), posDestination: self.subText.frame.origin, posAnimDuration: 0.5)
+                        self.animateAlpha(layer: self.textLayerParent, isAppearing: true, duration: 0.8, completed: nil)
                 })
             }
         }
     }
     
-    func startPathAnimationForTheTwoStroks(myPath:(complete:Stroke?, unComplete:Stroke?))
-    {
-        self.animatePath(of: myPath.complete, completed:
-        {
-            guard let uncompleted = myPath.unComplete else { return }//in case the shape is totally complete, there will be no uncomplete path
-            self.animatePath(of: uncompleted, completed: nil)
-        })
-    }
-    
-    func reverse(removeBtns:Bool, completed: (()->())?)
+    public func reverse(removeBtns:Bool, completed: (()->())?)
     {
         guard let path = myPath else { return }
         if isAnimationRunning() { return }
         self.reverseStroke(layer: path.unComplete?.shapeLayer, stroke: path.unComplete)
         {
             self.reverseStroke(layer: path.complete?.shapeLayer, stroke: path.complete, completed:
-            {
-                if removeBtns
                 {
-                    self.animateAlpha(layer: self.textLayerParent, isAppearing: false, completed: nil)
-                    let count = self.processItems.count
-                    for i in 0  ..<  count
+                    if removeBtns
                     {
-                        let item = self.processItems[i]
-                        self.animateAlpha(layer: item.layer, isAppearing: false, completed:
+                        self.animateAlpha(layer: self.textLayerParent, isAppearing: false, completed: nil)
+                        let count = self.processItems.count
+                        for i in 0  ..<  count
                         {
-                            self.processItems.removeLast()
-                            if self.processItems.count == 0
-                            {
-                                self.clearAllLayers()
-                                completed?()
-                            }
-                        })
+                            let item = self.processItems[i]
+                            self.animateAlpha(layer: item.layer, isAppearing: false, completed:
+                                {
+                                    self.processItems.removeLast()
+                                    if self.processItems.count == 0
+                                    {
+                                        self.clearAllLayers()
+                                        completed?()
+                                    }
+                            })
+                        }
                     }
-                }
             })
         }
+    }
+    
+    func startPathAnimationForTheTwoStroks(myPath:(complete:Stroke?, unComplete:Stroke?))
+    {
+        self.animatePath(of: myPath.complete, completed:
+            {
+                guard let uncompleted = myPath.unComplete else { return }//in case the shape is totally complete, there will be no uncomplete path
+                self.animatePath(of: uncompleted, completed: nil)
+        })
     }
     
     func isDrawed()->Bool
@@ -187,8 +187,8 @@ class ProcessLoadingView: UIView
         stroke.shapeLayer.lineDashPattern = stroke.lineDashPattern
         
         animateStroke(stroke: stroke, completed:
-        {
-            completed?()
+            {
+                completed?()
         })
         self.curvesLayerParent.addSublayer(stroke.shapeLayer)
     }
@@ -203,11 +203,11 @@ class ProcessLoadingView: UIView
         circleShap.layer.position = CGPoint(x: x, y: y)
         layer.addSublayer(circleShap.layer)
         animateScalingWithAlpha(layer: circleShap.layer, delayTime: 0.05 + Double(index)/3 ,completed:
-        {
-            if index == self.options.curvesEndRadians.count - 2
             {
-                completed?()
-            }
+                if index == self.options.curvesEndRadians.count - 2
+                {
+                    completed?()
+                }
         })
     }
     
@@ -297,8 +297,8 @@ class ProcessLoadingView: UIView
     {
         CATransaction.begin()
         CATransaction.setCompletionBlock
-        {
-            completed?()
+            {
+                completed?()
         }
         let pathAnimation = CABasicAnimation(keyPath: "strokeEnd")
         pathAnimation.duration =  CFTimeInterval(stroke.length / options.inSpeed)
@@ -313,10 +313,10 @@ class ProcessLoadingView: UIView
         guard let stroke = stroke else { completed?(); return }
         CATransaction.begin()
         CATransaction.setCompletionBlock
-        {
-            layer?.removeAllAnimations()
-            layer?.path = nil
-            completed?()
+            {
+                layer?.removeAllAnimations()
+                layer?.path = nil
+                completed?()
         }
         let pathAnimation = CABasicAnimation(keyPath: "strokeEnd")
         pathAnimation.duration =  CFTimeInterval(stroke.length / options.outSpeed)
@@ -332,8 +332,8 @@ class ProcessLoadingView: UIView
     {
         CATransaction.begin()
         CATransaction.setCompletionBlock
-        {
-            completed?()
+            {
+                completed?()
         }
         let opacityAnimation = CABasicAnimation(keyPath: "opacity")
         opacityAnimation.duration = CFTimeInterval(duration)
@@ -349,8 +349,8 @@ class ProcessLoadingView: UIView
     {
         CATransaction.begin()
         CATransaction.setCompletionBlock
-        {
-            completed?()
+            {
+                completed?()
         }
         layer.opacity = 0
         let opacityAnimation = CABasicAnimation(keyPath: "opacity")
@@ -358,7 +358,7 @@ class ProcessLoadingView: UIView
         opacityAnimation.beginTime = CACurrentMediaTime() + delayTime
         opacityAnimation.fromValue = 0
         opacityAnimation.toValue = 1
-
+        
         opacityAnimation.fillMode = kCAFillModeBoth
         layer.opacity = 1
         layer.add(opacityAnimation, forKey: animationKey)
@@ -450,7 +450,7 @@ class ProcessLoadingView: UIView
         {
             return true
         }
-
+        
         if hasAnimationKeys(for: self.subText)
         {
             return true
@@ -467,11 +467,4 @@ class ProcessLoadingView: UIView
         return false
     }
 }
-
-
-
-
-
-
-
 
