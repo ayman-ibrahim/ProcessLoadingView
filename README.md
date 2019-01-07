@@ -2,7 +2,7 @@
 [![Pod Version](http://img.shields.io/cocoapods/v/ProcessLoadingView.svg?style=flat)](http://cocoadocs.org/docsets/ProcessLoadingView/)
 [![Pod License](http://img.shields.io/cocoapods/l/ProcessLoadingView.svg?style=flat)](https://github.com/ayman-ibrahim/ProcessLoadingView/blob/master/LICENSE)
 [![Language](http://img.shields.io/badge/language-swift-brightgreen.svg?style=flat)](https://developer.apple.com/swift)
-![Swift version](https://img.shields.io/badge/swift-4.0-orange.svg)
+![Swift version](https://img.shields.io/badge/swift-4.2-orange.svg)
 
 ##
 
