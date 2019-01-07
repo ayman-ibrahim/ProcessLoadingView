@@ -186,7 +186,7 @@ public class ProcessLoadingView: UIView
         stroke.shapeLayer.strokeColor = stroke.isCompletePath ? options.completedPathColor.cgColor : options.unCompletedPathColor.cgColor
         stroke.shapeLayer.lineWidth = 3
         stroke.shapeLayer.fillColor = UIColor.clear.cgColor
-        stroke.shapeLayer.lineJoin = kCALineCapButt
+        stroke.shapeLayer.lineJoin = CAShapeLayerLineJoin.bevel
         stroke.shapeLayer.lineDashPattern = stroke.lineDashPattern
         
         animateStroke(stroke: stroke, completed:
@@ -283,7 +283,7 @@ public class ProcessLoadingView: UIView
         let text = CATextLayer()
         text.isWrapped = true
         text.contentsScale = UIScreen.main.scale
-        text.alignmentMode = kCAAlignmentCenter
+        text.alignmentMode = CATextLayerAlignmentMode.center
         return text
     }
     
@@ -325,7 +325,7 @@ public class ProcessLoadingView: UIView
         pathAnimation.duration =  CFTimeInterval(stroke.length / options.outSpeed)
         pathAnimation.fromValue = layer?.presentation()?.strokeEnd
         pathAnimation.toValue = 0
-        pathAnimation.fillMode = kCAFillModeBoth
+        pathAnimation.fillMode = CAMediaTimingFillMode.both
         pathAnimation.isRemovedOnCompletion = false
         layer?.add(pathAnimation, forKey: animationKey)
         CATransaction.commit()
@@ -342,7 +342,7 @@ public class ProcessLoadingView: UIView
         opacityAnimation.duration = CFTimeInterval(duration)
         opacityAnimation.fromValue = isAppearing ? 0 : 1
         opacityAnimation.toValue = isAppearing ? 1 : 0
-        opacityAnimation.fillMode = kCAFillModeBoth
+        opacityAnimation.fillMode = CAMediaTimingFillMode.both
         layer.opacity = isAppearing ? 1 : 0
         layer.add(opacityAnimation, forKey: animationKey)
         CATransaction.commit()
@@ -362,14 +362,14 @@ public class ProcessLoadingView: UIView
         opacityAnimation.fromValue = 0
         opacityAnimation.toValue = 1
         
-        opacityAnimation.fillMode = kCAFillModeBoth
+        opacityAnimation.fillMode = CAMediaTimingFillMode.both
         layer.opacity = 1
         layer.add(opacityAnimation, forKey: animationKey)
         
         let scaleAnimation = CABasicAnimation(keyPath: "transform.scale")
         scaleAnimation.beginTime = CACurrentMediaTime() + delayTime
         scaleAnimation.duration = CFTimeInterval(duration)
-        scaleAnimation.fillMode = kCAFillModeBoth
+        scaleAnimation.fillMode = CAMediaTimingFillMode.both
         scaleAnimation.fromValue = 0
         scaleAnimation.toValue = 1
         
@@ -384,14 +384,14 @@ public class ProcessLoadingView: UIView
         let origin = NSValue(cgPoint: posOrigin)
         animation.fromValue = origin
         animation.toValue = NSValue(cgPoint: posDestination)
-        animation.fillMode = kCAFillModeForwards
+        animation.fillMode = CAMediaTimingFillMode.forwards
         layer.add(animation, forKey: nil)
         
         let opacityAnimation = CABasicAnimation(keyPath: "opacity")
         opacityAnimation.duration = CFTimeInterval(opacityAnimDuration)
         opacityAnimation.fromValue = 0
         opacityAnimation.toValue = 1
-        opacityAnimation.fillMode = kCAFillModeBoth
+        opacityAnimation.fillMode = CAMediaTimingFillMode.both
         layer.opacity = 1
         layer.add(opacityAnimation, forKey: animationKey)
     }
