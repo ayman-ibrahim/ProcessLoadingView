@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ProcessLoadingView'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.summary          = '`ProcessLoadingView` is a CABasicAnimation based loading animation inspired from https://dribbble.com/shots/1118077-Proces-animation'
 
 # This description is used to generate tags and improve search results.
