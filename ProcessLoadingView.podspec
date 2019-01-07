@@ -26,6 +26,7 @@ It's fully customizable and easy to use.
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'ayman.ibrahim.alim@gmail.com' => 'ayman.ibrahim.alim@gmail.com' }
   s.source           = { :git => 'https://github.com/ayman-ibrahim/ProcessLoadingView.git', :tag => s.version.to_s }
+  s.swift_version = '4.2'
 
   s.ios.deployment_target = '8.0'
 
